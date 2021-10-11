@@ -8,7 +8,7 @@ class Servise {
     }
 
     async getAll() {
-        const allPosts = await Post.find();
+        const allPosts = await Post.find()
         return (allPosts)
     }
     async getOne(id) {

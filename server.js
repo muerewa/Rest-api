@@ -1,28 +1,23 @@
+// Подключаем модули
 const express = require('express')
 const mongoose = require('mongoose')
 const config = require('config')
 const router = require('./router')
-const path = require('path')
 
-let url = config.get("url")
+let url = config.get("url") // Создаем переменную с url для подключения к mongodb
 const app = express()
-const port = 3000
+const port = 3000 || process.env.port
 
-app.use(express.static('public'))
-app.use(express.json())
-app.use(express.static(__dirname + "/index.html"));
-app.use('/api', router)
+app.use(express.json()) // Заставляем express парсить json
+app.use('/api', router) // Подключаем роутер
 
-app.get('/',(req,res) => {
-    res.status(200)
-    res.sendFile(path.join(__dirname, 'index.html'))
 
-})
 
 async function startServer() {
     try {
+        // Подключение к базе данных
         await mongoose.connect(url, {useUnifiedTopology: true, useNewUrlParser: true})
-        app.listen(port)
+        app.listen(port) // Включение сервера
     }catch(e) {
         console.log(e)
     }
