@@ -1,5 +1,5 @@
 const Post = require('./post-schema')
-const service = require('./service');
+const service = require('./Postservice');
 
 class PostController {
     // Обработка запроса на создание формы
