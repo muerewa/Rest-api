@@ -6,7 +6,6 @@ const router = require('./router')
 
 let url = config.get("url") // Создаем переменную с url для подключения к mongodb
 const app = express()
-const port = 3000 || process.env.port
 
 app.use(express.json()) // Заставляем express парсить json
 app.use('/api', router) // Подключаем роутер
