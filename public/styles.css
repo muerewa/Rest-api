@@ -1,0 +1,11 @@
+
+.post-inputs {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    margin-top: 10px;
+}

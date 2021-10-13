@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rest api</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <form action="http://localhost:3000/api/posts" method="post">
+        <h1>Post зарпрос на создание формы</h1>
+        <div class="post-inputs">
+            <input type="text" placeholder="name" name="name">
+            <input type="text" placeholder="description" name="description">
+            <input type="text" placeholder="category" name="category">
+            <input type="text" placeholder="podcategory" name="podcategory">
+            <input type="text" placeholder="type" name="type">
+            <input type="submit">
+        </div>    
+    </form>
+    <script src="main.js" ></script>
+</body>
+</html>
